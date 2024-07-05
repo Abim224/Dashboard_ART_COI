@@ -24,6 +24,13 @@ import time
 from streamlit_extras.metric_cards import style_metric_cards
 import schedule
 
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="👩‍💻",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 agent_df = pd.read_excel("./TL Mapping for COI.xlsx")
 agent_df = agent_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 agent_df.replace('-', 'OFF', inplace=True)
