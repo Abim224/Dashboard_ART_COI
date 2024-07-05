@@ -24,7 +24,7 @@ import time
 from streamlit_extras.metric_cards import style_metric_cards
 import schedule
 
-agent_df = pd.read_excel(r"D:\Project\Dashboard\TL Mapping for COI.xlsx")
+agent_df = pd.read_excel("./logo.png/TL Mapping for COI.xlsx")
 agent_df = agent_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 agent_df.replace('-', 'OFF', inplace=True)
 agent_df.replace(np.nan, 'OFF', inplace=True)
