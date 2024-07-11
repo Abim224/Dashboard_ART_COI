@@ -66,7 +66,7 @@ if datetime.today().day<=9:
     val = '0'+str(datetime.today().day)
 else:
     val =datetime.today().day
-current_day = str(datetime.today().year)+"-"+str(mnth)+"-"+str('05')
+current_day = str(datetime.today().year)+"-"+str(mnth)+"-"+str(val)
 def convert_to_12hr_format(time_range):
     try:
         start_time, end_time = time_range.split(' - ')
